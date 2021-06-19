@@ -8,4 +8,6 @@ import egovframework.rte.psl.dataaccess.mapper.Mapper;
 @Mapper("cmmnMapper")
 public interface CmmnMapper {
 	public List<HashMap<String, Object>> list();
+	
+	public List<HashMap<String, Object>> list1(HashMap<String, Object> param);
 }

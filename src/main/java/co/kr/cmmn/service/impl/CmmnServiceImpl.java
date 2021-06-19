@@ -20,4 +20,10 @@ public class CmmnServiceImpl implements CmmnService{
 		// TODO Auto-generated method stub
 		return cmmnMapper.list();
 	}
+
+	@Override
+	public List<HashMap<String, Object>> list1(HashMap<String, Object> param) {
+		// TODO Auto-generated method stub
+		return cmmnMapper.list1(param);
+	}
 }
