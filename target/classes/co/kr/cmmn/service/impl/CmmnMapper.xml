@@ -22,6 +22,45 @@
 			view,
 			love
 	from	board
-	where 	id = #{id}
 </select>
+
+<insert id="add" parameterType="hashMap">
+	INSERT INTO 	board(
+					id, 
+					title, 
+					"content", 
+					writer, 
+					regDate, 
+					"view", 
+					love)
+	VALUES(
+					#{"id"}, 
+					#{"title"}, 
+					#{"content"}, 
+					#{"writer"}, 
+					#{"regDate"}, 
+					#{"view"}, 
+					#{"love"})
+</insert>
+
+<update id="update" parameterType="hashMap">
+	UPDATE 	board
+	SET 	
+			title = #{title}, 
+			content = #{"content"}, 
+			writer = #{"writer"}, 
+			regDate = #{"regDate"}, 
+			view = #{"view"}, 
+			love = #{"love"}
+			
+	WHERE 	
+			id = #{"id"}
+</update>
+
+<delete id="delete" parameterType="hashMap" flushCache="true">
+	DELETE FROM 	board
+	WHERE 	
+					id = #{"id"};
+</delete>
+
 </mapper>

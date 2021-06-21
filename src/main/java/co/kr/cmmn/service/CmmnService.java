@@ -7,4 +7,10 @@ public interface CmmnService {
 	public List<HashMap<String, Object>> list();
 	
 	public List<HashMap<String, Object>> list1(HashMap<String, Object> param);
+	
+	public Integer add(HashMap<String, Object> param);
+	
+	public Integer update(HashMap<String, Object> param);
+	
+	public Integer delete(HashMap<String, Object> param);
 }

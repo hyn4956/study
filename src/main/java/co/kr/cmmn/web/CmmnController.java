@@ -49,4 +49,27 @@ public class CmmnController {
 		return jsonView;
 	}
 	
+	@RequestMapping(value="/add.do", method=RequestMethod.POST)
+	public ModelAndView add(@RequestParam HashMap<String, Object> param){
+		ModelAndView jsonView = new ModelAndView("jsonView");
+		int result = cmmnService.add(param);
+		jsonView.addObject("result", result);
+		return jsonView;
+	}
+	
+	@RequestMapping(value="/update.do", method=RequestMethod.POST)
+	public ModelAndView update(@RequestParam HashMap<String, Object> param){
+		ModelAndView jsonView = new ModelAndView("jsonView");
+		int result = cmmnService.update(param);
+		jsonView.addObject("result", result);
+		return jsonView;
+	}
+	
+	@RequestMapping(value="/delete.do", method=RequestMethod.POST)
+	public ModelAndView delete(@RequestParam HashMap<String, Object> param){
+		ModelAndView jsonView = new ModelAndView("jsonView");
+		int result = cmmnService.delete(param);
+		jsonView.addObject("result", result);
+		return	jsonView;
+	}
 }

@@ -26,4 +26,22 @@ public class CmmnServiceImpl implements CmmnService{
 		// TODO Auto-generated method stub
 		return cmmnMapper.list1(param);
 	}
+
+	@Override
+	public Integer add(HashMap<String, Object> param) {
+		// TODO Auto-generated method stub
+		return cmmnMapper.add(param);
+	}
+
+	@Override
+	public Integer update(HashMap<String, Object> param) {
+		// TODO Auto-generated method stub
+		return cmmnMapper.update(param);
+	}
+
+	@Override
+	public Integer delete(HashMap<String, Object> param) {
+		// TODO Auto-generated method stub
+		return cmmnMapper.delete(param);
+	}
 }

@@ -8,18 +8,19 @@
                                  http://www.springframework.org/schema/security/spring-security.xsd">
 
 	<http auto-config="true" use-expressions="false">
-	<!-- auto-config="true" 암호화 방식을 자동화 시킨다. (기본 로그인페이지 / HTTP 기본인증 / 로그아웃 기능 등을 제공) -->
-	<!-- use-expressions = "true"는 SpEL을 사용을 의미 -->
-	<!-- - use-expressions="true" 로 설정하면 SpEL을 사용해서 작성을 해야한다. 그렇지 않으면 에러가 발생한다. -->
+																								<!-- auto-config="true" 암호화 방식을 자동화 시킨다. (기본 로그인페이지 / HTTP 기본인증 / 로그아웃 기능 등을 제공) -->
+																								<!-- use-expressions = "true"는 SpEL을 사용을 의미 -->
+																								<!-- - use-expressions="true" 로 설정하면 SpEL을 사용해서 작성을 해야한다. 그렇지 않으면 에러가 발생한다. -->
 	
-		<intercept-url pattern="/**" access="ROLE_USER" /> <!-- pattern="/**"는 /*/* 와는 차이가 있다. /*/*는 첫번째 슬래시 이후에 두번째 슬래시공간은 찾질 못하지만,
-																/**는 /가 몇개가 있더라도 첫번째 슬래시 이후의 모든 기호나 문자또한 포함해서 다 찾는다. -->
-														   <!-- ROLE_USER는 기본형태로 USER의 정보를 intercept 한다는 뜻 -->
+		<intercept-url pattern="/**" access="ROLE_USER" /> 
+																								<!-- pattern="/**"는 /*/* 와는 차이가 있다. /*/*는 첫번째 슬래시 이후에 두번째 슬래시공간은 찾질 못하지만,
+																								/**는 /가 몇개가 있더라도 첫번째 슬래시 이후의 모든 기호나 문자또한 포함해서 다 찾는다.
+																							  	ROLE_USER는 기본형태로 USER의 정보를 intercept 한다는 뜻 -->
 	</http>
 	<authentication-manager>
 		<authentication-provider>
-			<user-service> <!-- 서비스단에서 로직을 구성할때 아래의 user정보를 이용함 -->
-				<user name="user" password="userPw" authorities="ROLE_USER" /> <!-- authorities의 ROLE_USER라는 유저 권한을 갖고있다. -->
+			<user-service> 																		<!-- 서비스단에서 로직을 구성할때 아래의 user정보를 이용함 -->
+				<user name="user" password="userPw" authorities="ROLE_USER" /> 					<!-- authorities의 ROLE_USER라는 유저 권한을 갖고있다. -->
 				<user name="guest" password="guest" authorities="ROLE_GUEST" />
 			</user-service>
 		</authentication-provider>
