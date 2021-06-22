@@ -6,7 +6,7 @@ import java.util.List;
 public interface CmmnService {
 	public List<HashMap<String, Object>> list();
 	
-	public List<HashMap<String, Object>> list1(HashMap<String, Object> param);
+	public List<HashMap<String, Object>> list1();
 	
 	public Integer add(HashMap<String, Object> param);
 	

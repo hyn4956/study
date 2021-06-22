@@ -15,7 +15,7 @@
 		<c:out value="${v.title}"></c:out>
 		<c:out value="${v.content}"></c:out>
 		<c:out value="${v.writer}"></c:out>
-		<c:out value="${v.regDate}"></c:out>
+		<c:out value="${v.regdate}"></c:out>
 		<c:out value="${v.view}"></c:out>
 		<c:out value="${v.love}"></c:out>
 	</c:forEach>

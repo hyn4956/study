@@ -22,9 +22,9 @@ public class CmmnServiceImpl implements CmmnService{
 	}
 
 	@Override
-	public List<HashMap<String, Object>> list1(HashMap<String, Object> param) {
+	public List<HashMap<String, Object>> list1() {
 		// TODO Auto-generated method stub
-		return cmmnMapper.list1(param);
+		return cmmnMapper.list1();
 	}
 
 	@Override

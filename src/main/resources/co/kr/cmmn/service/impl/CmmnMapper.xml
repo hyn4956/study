@@ -7,7 +7,7 @@
 			title,
 			content,
 			writer,
-			regDate,
+			regdate,
 			view,
 			love
 	from	board
@@ -18,10 +18,11 @@
 			title,
 			content,
 			writer,
-			regDate,
+			regdate,
 			view,
 			love
 	from	board
+	order by id asc
 </select>
 
 <insert id="add" parameterType="hashMap">

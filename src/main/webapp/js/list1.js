@@ -25,14 +25,17 @@ function list1(){
 		type : "POST",
 		dataType : "json",
 		success : function(result) {
+			console.log(result.resultList.length);
 			for(i=0;i<result.resultList.length;i++){
+				var tBody = "<tr>"
 				tBody += "<td>"+result.resultList[i].id+"</td>";
 				tBody += "<td>"+result.resultList[i].title+"</td>";
 				tBody += "<td>"+result.resultList[i].content+"</td>";
 				tBody += "<td>"+result.resultList[i].writer+"</td>";
-				tBody += "<td>"+result.resultList[i].regDate+"</td>";
+				tBody += "<td>"+result.resultList[i].regdate+"</td>";
 				tBody += "<td>"+result.resultList[i].view+"</td>";
 				tBody += "<td>"+result.resultList[i].love+"</td>";
+				tBody += "</tr>"
 				$("#tBody").append(tBody);
 			}
 		}

@@ -29,7 +29,6 @@ public class CmmnController {
 		return "list1";
 	}
 	
-	//게시판 리스트
 	@RequestMapping(value="/list.do")
 	public ModelAndView list(){
 		ModelAndView mv = new ModelAndView();
@@ -39,16 +38,16 @@ public class CmmnController {
 		return mv;
 	}
 	
-	//게시판 리스트 jsonView를 통한 ajax통신
+	//게시판 목록 조회
 	@RequestMapping(value="/listAjax.do", method=RequestMethod.POST)
-	public ModelAndView list1(@RequestParam HashMap<String, Object> param){
+	public ModelAndView list1(){
 		ModelAndView jsonView = new ModelAndView("jsonView");
-		param.put("id", 1);
-		List<HashMap<String, Object>> list = cmmnService.list1(param);
-		jsonView.addObject("resultList", list);
+		List<HashMap<String, Object>> result = cmmnService.list1();
+		jsonView.addObject("resultList", result);
 		return jsonView;
 	}
 	
+	//게시판 글 추가
 	@RequestMapping(value="/add.do", method=RequestMethod.POST)
 	public ModelAndView add(@RequestParam HashMap<String, Object> param){
 		ModelAndView jsonView = new ModelAndView("jsonView");
@@ -57,6 +56,7 @@ public class CmmnController {
 		return jsonView;
 	}
 	
+	//게시판 글 수정
 	@RequestMapping(value="/update.do", method=RequestMethod.POST)
 	public ModelAndView update(@RequestParam HashMap<String, Object> param){
 		ModelAndView jsonView = new ModelAndView("jsonView");
@@ -65,6 +65,7 @@ public class CmmnController {
 		return jsonView;
 	}
 	
+	//게시판 글 삭제
 	@RequestMapping(value="/delete.do", method=RequestMethod.POST)
 	public ModelAndView delete(@RequestParam HashMap<String, Object> param){
 		ModelAndView jsonView = new ModelAndView("jsonView");

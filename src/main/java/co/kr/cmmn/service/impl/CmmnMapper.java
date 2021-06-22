@@ -9,7 +9,7 @@ import egovframework.rte.psl.dataaccess.mapper.Mapper;
 public interface CmmnMapper {
 	public List<HashMap<String, Object>> list();
 	
-	public List<HashMap<String, Object>> list1(HashMap<String, Object> param);
+	public List<HashMap<String, Object>> list1();
 	
 	public Integer add(HashMap<String, Object> param);
 	
