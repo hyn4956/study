@@ -7,7 +7,7 @@ Spring을 사용하여 로그인 인증 로직을 구현 하기 위해서는 Spr
 
 ## 핵심적으로 Filter와 Intercepter의 실행되는 시점이 다르다.
 
-#### Filter는 자원에 대한 요청, 자원에 대한 응답에 대하여 필터링을 수행하는 객체이다.
+### Filter는 자원에 대한 요청, 자원에 대한 응답에 대하여 필터링을 수행하는 객체이다.
 
 Init(), destroy()를 이용해 생성과 소멸 시 행동을 취할 수있으며, doFilter() 메소드를 통해 요청과 응답을 다음 루틴으로 전송한다.
 Tomcat javax.servlet 패키지에 구현되어 있으며, Web Application에 등록한다. (Tomcatㅔ서 제공하는 클래스이기때문)
