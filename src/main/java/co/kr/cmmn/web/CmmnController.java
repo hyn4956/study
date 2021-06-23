@@ -28,6 +28,11 @@ public class CmmnController {
 	public String listPage(){
 		return "list1";
 	}
+
+	@RequestMapping(value="/addPage.do")
+	public String addPage(){
+		return "add";
+	}
 	
 	@RequestMapping(value="/list.do")
 	public ModelAndView list(){
@@ -51,8 +56,8 @@ public class CmmnController {
 	@RequestMapping(value="/add.do", method=RequestMethod.POST)
 	public ModelAndView add(@RequestParam HashMap<String, Object> param){
 		ModelAndView jsonView = new ModelAndView("jsonView");
-		int result = cmmnService.add(param);
-		jsonView.addObject("result", result);
+//		int result = cmmnService.add(param);
+//		jsonView.addObject("result", result);
 		return jsonView;
 	}
 	

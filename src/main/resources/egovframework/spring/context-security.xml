@@ -9,7 +9,7 @@
                                  http://www.springframework.org/schema/security/spring-security.xsd">
 
 	<http auto-config="true" use-expressions="false">
-		<security:csrf disabled="true"/>
+<!-- 		<security:csrf disabled="true"/> -->
 																								<!-- auto-config="true" 암호화 방식을 자동화 시킨다. (기본 로그인페이지 / HTTP 기본인증 / 로그아웃 기능 등을 제공) -->
 																								<!-- use-expressions = "true"는 SpEL을 사용을 의미 -->
 																								<!-- - use-expressions="true" 로 설정하면 SpEL을 사용해서 작성을 해야한다. 그렇지 않으면 에러가 발생한다. -->
