@@ -18,9 +18,11 @@ Handler를 실행하기 전(preHandle()) 후(PostHandle()), view를 렌더링 �
 Intercepter가 작업을 처리 중 Exception이 발생하면 @ControllerAdvice 어노테이션을 통해 예외처리가 가능.
 
 > Filter와 Intercepter의 차이점
+
 >	>*호출 시점
 >	>	>1. Filter : DispatcherServlet 실행 전
 >	>	>2. Intercepter : DispatcherServlet 실행 후
+
 >	>*설정 위치
 >	>	>1. Filter : web.xml에서 등록
 >	>	>2. Intercepter : ApplicationContext에 등록
