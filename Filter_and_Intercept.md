@@ -19,11 +19,11 @@ Intercepter가 작업을 처리 중 Exception이 발생하면 @ControllerAdvice 
 
 > Filter와 Intercepter의 차이점
 >	>*호출 시점
->	>	>1.Filter : DispatcherServlet 실행 전
->	>	>2.Intercepter : DispatcherServlet 실행 후
+>	>	>1. Filter : DispatcherServlet 실행 전
+>	>	>2. Intercepter : DispatcherServlet 실행 후
 >	>*설정 위치
->	>	>1.Filter : web.xml에서 등록
->	>	>2.Intercepter : ApplicationContext에 등록
+>	>	>1. Filter : web.xml에서 등록
+>	>	>2. Intercepter : ApplicationContext에 등록
 
 실제 적용할 때 용도의 차이점
 스프링 HandlerInterceptor documentation에서는 Filter를 더 강력한 도구로 표현하고 있다.
