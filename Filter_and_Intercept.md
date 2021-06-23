@@ -3,7 +3,7 @@
 Spring을 사용하여 로그인 인증 로직을 구현 하기 위해서는 Spring Security는 필수이다.
 그러기 위해서는 우선적으로 Filter와 Intercepter의 차이점을 알아야한다.
 우선 그림으로 표현된 MVC패턴의 로직중 Filter와 Intercepter의 역할과 위치이다.
-
+![spring-request-lifecycle](https://user-images.githubusercontent.com/52224039/123147010-82887d80-d499-11eb-82fd-d0fc3d563a96.jpg)
 
 ## 핵심적으로 Filter와 Intercepter의 실행되는 시점이 다르다.
 
