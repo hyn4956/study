@@ -13,7 +13,7 @@ Init(), destroy()를 이용해 생성과 소멸 시 행동을 취할 수있으�
 Tomcat javax.servlet 패키지에 구현되어 있으며, Web Application에 등록한다. (Tomcatㅔ서 제공하는 클래스이기때문)
 
   
-### Intercepter는 Controller에 들어오는 요청 HttpRequest와 응답 HttpResponse를 개로채는 역할을 하는 객체이다.
+### Intercepter는 Controller에 들어오는 요청 HttpRequest와 응답 HttpResponse를 가로채는 역할을 하는 객체이다.
 Handler를 실행하기 전(preHandle()) 후(PostHandle()), view를 렌더링 한 후 (afterCompletion()) 실행할 수 있다는 것이 장점이다.
 Intercepter가 작업을 처리 중 Exception이 발생하면 @ControllerAdvice 어노테이션을 통해 예외처리가 가능.
 
