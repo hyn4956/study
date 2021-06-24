@@ -25,7 +25,19 @@
 	order by id asc
 </select>
 
-<insert id="add" parameterType="hashMap">
+<select id="listInfo" resultType="hashMap">
+	select 	id,
+			title,
+			content,
+			writer,
+			regdate,
+			view,
+			love
+	from	board
+	where 	id = #{id}
+</select>
+
+<insert id="add">
 	INSERT INTO 	board(
 					id, 
 					title, 
@@ -35,33 +47,33 @@
 					"view", 
 					love)
 	VALUES(
-					#{"id"}, 
-					#{"title"}, 
-					#{"content"}, 
-					#{"writer"}, 
-					#{"regDate"}, 
-					#{"view"}, 
-					#{"love"})
+					${id}, 
+					#{title}, 
+					#{content}, 
+					#{writer}, 
+					#{regdate}, 
+					#{view}, 
+					#{love})
 </insert>
 
-<update id="update" parameterType="hashMap">
+<update id="update">
 	UPDATE 	board
 	SET 	
 			title = #{title}, 
-			content = #{"content"}, 
-			writer = #{"writer"}, 
-			regDate = #{"regDate"}, 
-			view = #{"view"}, 
-			love = #{"love"}
+			content = #{content}, 
+			writer = #{writer}, 
+			regDate = #{regdate}, 
+			view = #{view}, 
+			love = #{love}
 			
 	WHERE 	
-			id = #{"id"}
+			id = ${id}
 </update>
 
-<delete id="delete" parameterType="hashMap" flushCache="true">
+<delete id="delete">
 	DELETE FROM 	board
 	WHERE 	
-					id = #{"id"};
+					id = ${id};
 </delete>
 
 </mapper>

@@ -6,11 +6,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/add.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
 	<sec:csrfInput/>
-	<form action="/add.do" method="POST">
+	<form method="POST" id="add" name="add">
 		<table>
 			<tr>
 				<td>NO<input id="id" type="text" name="id"></td>
@@ -33,7 +35,7 @@
 				<td>좋아요<input id="love" type="text" name="love"></td>
 			</tr>
 		</table>
-		<button type="submit">전송</button>
+		<button type="button" onclick="btn('add');">완료</button>
 	</form>
 </body>
 </html>

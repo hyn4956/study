@@ -6,6 +6,7 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -52,12 +53,19 @@ public class CmmnController {
 		return jsonView;
 	}
 	
-	//게시판 글 추가
+	@RequestMapping(value="/listInfoPage.do")
+	public String listInfo(@RequestParam int id, Model model){
+		HashMap<String, Object> result = cmmnService.listInfo(id);
+		model.addAttribute("result", result);
+		return "/listInfo";
+	}
+	
+	//게시글 추가
 	@RequestMapping(value="/add.do", method=RequestMethod.POST)
 	public ModelAndView add(@RequestParam HashMap<String, Object> param){
 		ModelAndView jsonView = new ModelAndView("jsonView");
-//		int result = cmmnService.add(param);
-//		jsonView.addObject("result", result);
+		int result = cmmnService.add(param);
+		jsonView.addObject("result", result);
 		return jsonView;
 	}
 	

@@ -27,7 +27,7 @@ function list1(){
 		success : function(result) {
 			console.log(result.resultList.length);
 			for(i=0;i<result.resultList.length;i++){
-				var tBody = "<tr>"
+				var tBody = "<tr onclick='infoView(\""+result.resultList[i].id+"\")' data='"+result.resultList[i].id+"'>";
 				tBody += "<td>"+result.resultList[i].id+"</td>";
 				tBody += "<td>"+result.resultList[i].title+"</td>";
 				tBody += "<td>"+result.resultList[i].content+"</td>";
@@ -40,4 +40,8 @@ function list1(){
 			}
 		}
 	})
+}
+
+function infoView(data){
+	location = "/listInfoPage.do?id="+data
 }

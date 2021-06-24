@@ -28,6 +28,12 @@ public class CmmnServiceImpl implements CmmnService{
 	}
 
 	@Override
+	public HashMap<String, Object> listInfo(int id) {
+		// TODO Auto-generated method stub
+		return cmmnMapper.listInfo(id);
+	}
+
+	@Override
 	public int add(HashMap<String, Object> param) {
 		// TODO Auto-generated method stub
 		return cmmnMapper.add(param);

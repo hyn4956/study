@@ -12,7 +12,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-리스트1
+<h1>리스트 페이지</h1>
+<button onclick="location='/addPage.do'">추가</button>
 <table id="tableA" border="1px solid black">
 	<tbody id="tBody">
 		<tr>

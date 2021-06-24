@@ -11,6 +11,8 @@ public interface CmmnMapper {
 	
 	public List<HashMap<String, Object>> list1();
 	
+	public HashMap<String, Object> listInfo(int id);
+	
 	public int add(HashMap<String, Object> param);
 	
 	public int update(HashMap<String, Object> param);
